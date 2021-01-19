@@ -5,7 +5,6 @@ from frcnn import FRCNN
 from PIL import Image
 
 frcnn = FRCNN()
-
 while True:
     img = input('Input image filename:')
     try:
@@ -15,4 +14,6 @@ while True:
         continue
     else:
         r_image = frcnn.detect_image(image)
-        r_image.show()
+        r_image.save("prediction.jpg")
+    break
+    
